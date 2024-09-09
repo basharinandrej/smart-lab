@@ -1,0 +1,62 @@
+@import "/functions.sass"
+
+.ds
+    &--button
+        border-radius: 5px
+        border: transparent
+        color: var(--color-base-white)
+        cursor: pointer
+        font-family: sans-serif /*todo Roboto*/
+
+        &--primary
+            &.ds--button--default
+                background-color: var(--color-primary-500)
+
+            &:hover,
+            &.ds--button--hover
+                background-color: var(--color-primary-600)
+                transition: .3s
+
+            &:disabled,
+            &.ds--button--disabled
+                background-color: var(--color-primary-400)
+
+            &.ds--button--loading
+                background-color: var(--color-primary-400)
+
+            &.ds--button--active
+                background-color: var(--color-primary-600)
+
+
+        &--gray /*todo Заменить на secondary*/
+            &.ds--button--default
+                background-color: var(--color-neutral-400)
+
+            &:hover,
+            &.ds--button--hover
+                background-color: var(--color-neutral-500)
+                transition: .3s
+
+            &:disabled,
+            &.ds--button--disabled
+                background-color: var(--color-neutral-300)
+
+            &.ds--button--loading
+                background-color: var(--color-neutral-300)
+
+            &.ds--button--active
+                background-color: var(--color-neutral-500)
+
+
+        &--small
+            padding: base(1) base(4)
+            font-size: 13px
+        &--medium
+            padding: base(2) base(5)
+            font-size: 14px
+        &--big
+            padding: base(3) base(6)
+            font-size: 16px
+
+
+

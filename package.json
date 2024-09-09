@@ -1,0 +1,24 @@
+{
+  "name": "smart-lab",
+  "version": "1.0.0",
+  "description": "design system for smart-lab",
+  "main": "index.ts",
+  "scripts": {
+    "storybook": "storybook dev",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/builder-vite": "^8.2.9",
+    "@storybook/html": "^8.2.9",
+    "@storybook/html-vite": "^8.2.9",
+    "@whitespace/storybook-addon-html": "^6.1.1",
+    "sass": "^1.78.0",
+    "storybook": "^8.2.9"
+  }
+}
