@@ -2,11 +2,24 @@
 
 .ds
     &--button
+        display: flex
+        align-items: center
+
         border-radius: 5px
         border: transparent
         color: var(--color-base-white)
         cursor: pointer
         font-family: sans-serif /*todo Roboto*/
+
+        &-icon
+            width: 24px
+            height: 24px
+            display: block
+            margin-right: base(2)
+            stroke: var(--color-base-white)
+
+        &-paragraph
+            margin: base(0)
 
         &--primary
             &.ds--button--default

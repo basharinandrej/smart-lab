@@ -29,6 +29,12 @@ export const controls: Controls = {
       StateButton.Disabled
     ]
   },
+  icon: {
+    description: 'Наличие иконки',
+    control: {
+      type: 'boolean',
+    }
+  }
 }
 
 export const defaultProps: Partial<Props> = {
