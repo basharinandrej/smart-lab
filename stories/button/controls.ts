@@ -69,6 +69,7 @@ export const defaultProps: DefaultProps = {
   icon: false
 }
 type Controls = Partial<ArgTypes<Props>>
+
 type DefaultProps = Partial<Omit<Props, 'icon'> & {
   icon: boolean
 }>

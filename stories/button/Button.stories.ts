@@ -6,7 +6,7 @@ import closeIcon from '../assets/trash.svg';
 
 type Story = StoryObj<Props>;
 
-const meta: Meta<Props> = {
+const meta: Meta<Omit<Props, 'icon'>> = {
   title: 'UI-KIT/Button',
   render: (props: Props) => {
     if(props.icon) {
@@ -15,7 +15,7 @@ const meta: Meta<Props> = {
 
     return createButton(props)
   },
-  args: defaultProps,
+  args:defaultProps,
   argTypes: controls,
   parameters: {
     docs: {
@@ -43,12 +43,7 @@ export const ButtonIcon: Story = {
 
 
 /*
-* - ts +
-* - docs components
-* - sass +
-* - docs storybook
-* - icon
-* - states
 * - typography
+* - themes
 * - deploy
 * */
