@@ -1,0 +1,18 @@
+var a=(e=>(e.Small="Small",e.Medium="Medium",e.Big="Big",e))(a||{}),r=(e=>(e.Primary="Primary",e.Gray="Gray",e))(r||{}),t=(e=>(e.Default="Default",e.Hover="Hover",e.Disabled="Disabled",e.Loading="Loading",e.Active="Active",e))(t||{});const P=e=>({[r.Primary]:"ds--button--primary",[r.Gray]:"ds--button--gray"})[e],D=e=>({[a.Small]:"ds--button--small",[a.Medium]:"ds--button--medium",[a.Big]:"ds--button--big"})[e],L=e=>({[t.Default]:"ds--button--default",[t.Active]:"ds--button--active",[t.Disabled]:"ds--button--disabled",[t.Loading]:"ds--button--loading",[t.Hover]:"ds--button--hover"})[e],E=({label:e,onClick:n,size:f=a.Medium,type:v=r.Primary,state:C=t.Default,icon:m})=>{const s=document.createElement("button"),l=document.createElement("p"),c=document.createElement("div");return s.type="button",s.addEventListener("click",n),l.setAttribute("class","ds--button-paragraph"),c.setAttribute("class","ds--button-icon"),l.innerText=e,c.insertAdjacentHTML("afterbegin",m),e&&s.insertAdjacentElement("afterbegin",l),m&&s.insertAdjacentElement("afterbegin",c),s.className=["ds--button",P(v),D(f),L(C)].join(" "),s},A={label:{description:"Текст в кнопке",table:{defaultValue:{summary:"Кнопка"},type:{summary:"string"}}},size:{description:"Размер кнопки",control:{type:"select"},table:{defaultValue:{summary:a.Medium},type:{summary:`${a.Small}, ${a.Medium}, ${a.Big}`}},options:[a.Big,a.Small,a.Medium]},type:{description:"Тип кнопки",control:{type:"select"},table:{defaultValue:{summary:r.Primary},type:{summary:`${r.Primary}, ${r.Gray}`}},options:[r.Primary,r.Gray]},state:{control:{type:"select"},description:"Состояние кнопки",table:{defaultValue:{summary:t.Default},type:{summary:`
+        ${t.Default}, 
+        ${t.Active},
+        ${t.Hover},
+        ${t.Loading},
+        ${t.Disabled}`}},options:[t.Default,t.Loading,t.Hover,t.Active,t.Disabled]},icon:{description:"Наличие иконки",table:{defaultValue:{summary:"null"},type:{summary:"HTMLElement"}},control:{type:"boolean"}}},$={label:"Кнопка",size:a.Medium,state:t.Default,icon:!1},M=`<svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.4891 9.99553L16.1116 18.8222M10.8884 18.8222L10.5109 9.99553M21.3851 6.84734C21.7582 6.89834 22.1291 6.95228 22.5 7.01014M21.3851 6.84734L20.22 20.463C20.1724 21.0173 19.8939 21.5351 19.44 21.9128C18.9862 22.2904 18.3904 22.5002 17.772 22.5H9.228C8.60956 22.5002 8.01384 22.2904 7.55998 21.9128C7.10611 21.5351 6.82755 21.0173 6.78 20.463L5.61491 6.84734M21.3851 6.84734C20.126 6.67622 18.8605 6.54635 17.5909 6.45799M5.61491 6.84734C5.24182 6.89736 4.87091 6.9513 4.5 7.00916M5.61491 6.84734C6.87396 6.67622 8.13953 6.54635 9.40909 6.45799M17.5909 6.45799V5.55963C17.5909 4.40235 16.5982 3.4373 15.3109 3.40101C14.1039 3.36633 12.8961 3.36633 11.6891 3.40101C10.4018 3.4373 9.40909 4.40333 9.40909 5.55963V6.45799M17.5909 6.45799C14.8677 6.26878 12.1323 6.26878 9.40909 6.45799" stroke-width="1.5"  />
+</svg>
+`,B={title:"UI-KIT/Button",render:e=>(e.icon&&(e.icon=M),E(e)),args:$,argTypes:A,parameters:{docs:{description:{component:"Самая часто используемая кнопка на сайте"}}}},o={args:{type:r.Primary}},i={args:{type:r.Primary,icon:M}};var u,d,y;o.parameters={...o.parameters,docs:{...(u=o.parameters)==null?void 0:u.docs,source:{originalSource:`{
+  args: {
+    type: TypeButton.Primary
+  }
+}`,...(y=(d=o.parameters)==null?void 0:d.docs)==null?void 0:y.source}}};var p,b,g;i.parameters={...i.parameters,docs:{...(p=i.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    type: TypeButton.Primary,
+    icon: closeIcon
+  }
+}`,...(g=(b=i.parameters)==null?void 0:b.docs)==null?void 0:g.source}}};const H=["Primary","ButtonIcon"];export{i as ButtonIcon,o as Primary,H as __namedExportsOrder,B as default};
