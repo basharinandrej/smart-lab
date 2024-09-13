@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/html-vite';
+import svgLoader from 'vite-svg-loader'
 
 const config: StorybookConfig = {
   stories: [
@@ -16,6 +17,20 @@ const config: StorybookConfig = {
   },
   docs: {
     defaultName: 'Документация',
+  },
+  core: {
+    builder: '@storybook/builder-vite', // 👈 The builder enabled here.
+  },
+  async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+
+    const mergedConfig = mergeConfig(config, {
+      plugins: [svgLoader({
+        defaultImport: 'raw'
+        })
+      ],
+    })
+    return mergedConfig
   },
 };
 export default config;

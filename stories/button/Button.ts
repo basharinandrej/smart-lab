@@ -10,14 +10,26 @@ export const createButton = ({
   onClick,
   size = SizeButton.Medium,
   type = TypeButton.Primary,
-  state = StateButton.Default
+  state = StateButton.Default,
+  icon
 }: Props) => {
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.innerText = label;
-  button.addEventListener('click', onClick);
+  const buttonElement = document.createElement('button');
+  const paragraphElement = document.createElement('p')
+  const iconElement = document.createElement('div')
 
-  button.className = [
+  buttonElement.type = 'button';
+  buttonElement.addEventListener('click', onClick);
+
+  paragraphElement.setAttribute('class', 'ds--button-paragraph')
+  iconElement.setAttribute('class', 'ds--button-icon')
+
+  paragraphElement.innerText = label
+  iconElement.insertAdjacentHTML('afterbegin', icon)
+
+  label && buttonElement.insertAdjacentElement('afterbegin', paragraphElement);
+  icon && buttonElement.insertAdjacentElement('afterbegin', iconElement)
+
+  buttonElement.className = [
     'ds--button',
 
     getClassNamesByTypes(type),
@@ -26,7 +38,7 @@ export const createButton = ({
   ].join(' ');
 
 
-  return button;
+  return buttonElement;
 };
 
 export interface Props {
@@ -35,5 +47,6 @@ export interface Props {
   size: SizeButton
   type: TypeButton
   state: StateButton
+  icon?: string
 }
 

@@ -2,11 +2,21 @@
 
 .ds
     &--button
+        display: flex
+        align-items: center
+
         border-radius: 5px
         border: transparent
-        color: var(--color-base-white)
+        color: var(--color-base)
         cursor: pointer
         font-family: sans-serif /*todo Roboto*/
+
+        &-icon
+            display: block
+            stroke: var(--color-base)
+
+        &-paragraph
+            margin: base(0)
 
         &--primary
             &.ds--button--default
@@ -51,12 +61,27 @@
         &--small
             padding: base(1) base(4)
             font-size: 13px
+
+            & .ds--button-icon
+                margin-right: base(1)
+                width: 15px
+                height: 15px
         &--medium
             padding: base(2) base(5)
             font-size: 14px
+
+            & .ds--button-icon
+                margin-right: base(2)
+                width: 20px
+                height: 20px
         &--big
             padding: base(3) base(6)
             font-size: 16px
+
+            & .ds--button-icon
+                margin-right: base(2)
+                width: 24px
+                height: 24px
 
 
 

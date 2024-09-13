@@ -4,8 +4,8 @@
   "description": "design system for smart-lab",
   "main": "index.ts",
   "scripts": {
-    "storybook": "storybook dev",
-    "build-storybook": "storybook build"
+    "start": "storybook dev",
+    "build": "storybook build"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "@storybook/html-vite": "^8.2.9",
     "@whitespace/storybook-addon-html": "^6.1.1",
     "sass": "^1.78.0",
-    "storybook": "^8.2.9"
+    "storybook": "^8.2.9",
+    "vite-svg-loader": "^5.1.0"
   }
 }

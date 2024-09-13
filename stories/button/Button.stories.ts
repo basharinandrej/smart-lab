@@ -2,13 +2,20 @@ import {createButton, Props} from './Button';
 import {TypeButton} from './enums/enums'
 import type {Meta, StoryObj} from '@storybook/html';
 import {controls, defaultProps} from "./controls";
+import closeIcon from '../assets/trash.svg';
 
 type Story = StoryObj<Props>;
 
-const meta: Meta<Props> = {
+const meta: Meta<Omit<Props, 'icon'>> = {
   title: 'UI-KIT/Button',
-  render: (props: Props) => createButton(props),
-  args: defaultProps,
+  render: (props: Props) => {
+    if(props.icon) {
+      props.icon = closeIcon
+    }
+
+    return createButton(props)
+  },
+  args:defaultProps,
   argTypes: controls,
   parameters: {
     docs: {
@@ -27,13 +34,16 @@ export const Primary: Story = {
   },
 };
 
+export const ButtonIcon: Story = {
+  args: {
+    type: TypeButton.Primary,
+    icon: closeIcon
+  },
+};
+
+
 /*
-* - ts +
-* - docs components
-* - sass +
-* - docs storybook
-* - icon
-* - states
 * - typography
+* - themes
 * - deploy
 * */
