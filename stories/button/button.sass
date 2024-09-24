@@ -11,6 +11,18 @@
         cursor: pointer
         font-family: sans-serif /*todo Roboto*/
 
+        &-loader
+            display: none
+            -webkit-animation: spin 1s linear infinite
+            animation: spin 1s linear infinite
+            border: base(.5) solid var(--color-base)
+            border-top: base(.5) solid transparent
+            border-radius: 50%
+
+        &--loading
+            .ds--button-loader
+                display: block
+
         &-icon
             display: block
             stroke: var(--color-base)
@@ -36,8 +48,6 @@
 
             &.ds--button--active
                 background-color: var(--color-primary-600)
-
-
         &--gray /*todo Заменить на secondary*/
             &.ds--button--default
                 background-color: var(--color-neutral-400)
@@ -62,26 +72,57 @@
             padding: base(1) base(4)
             font-size: 13px
 
+            &.ds--button--loading
+                .ds--button-paragraph
+                    margin-left: base(1)
+
+            & .ds--button-loader
+                height: base(3)
+                width: base(3)
+
             & .ds--button-icon
                 margin-right: base(1)
                 width: 15px
                 height: 15px
+
         &--medium
             padding: base(2) base(5)
             font-size: 14px
+
+            &.ds--button--loading
+                .ds--button-paragraph
+                    margin-left: base(2)
+
+            & .ds--button-loader
+                height: base(4)
+                width: base(4)
 
             & .ds--button-icon
                 margin-right: base(2)
                 width: 20px
                 height: 20px
+
         &--big
             padding: base(3) base(6)
             font-size: 16px
+
+            &.ds--button--loading
+                .ds--button-paragraph
+                    margin-left: base(2)
+
+            & .ds--button-loader
+                height: base(5)
+                width: base(5)
 
             & .ds--button-icon
                 margin-right: base(2)
                 width: 24px
                 height: 24px
 
-
-
+@keyframes spin
+    to
+        border-top-color: transparent
+        -webkit-transform: rotate(360deg)
+        transform: rotate(360deg)
+    
+        

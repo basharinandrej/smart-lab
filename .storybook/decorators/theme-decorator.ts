@@ -3,7 +3,7 @@ import {Themes} from "../enums/themes";
 
 export const themeDecorator: Decorator = (MyStory, props ) => {
   const mapThemes = {
-    '#333333': Themes.Dark,
+    '#333': Themes.Dark,
     '#F8F8F8': Themes.Light
   }
   const theme = props?.globals?.backgrounds?.value
