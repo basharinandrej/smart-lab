@@ -1,0 +1,91 @@
+import { Meta, Typeset } from '@storybook/blocks'
+ 
+<Meta title="Typography" />
+ 
+export const typography = {
+  type: {
+    primary: 'Roboto, sans-serif',
+  },
+  weight: {
+    bold: '500',
+    // extrabold: '800',
+    // black: '900',
+  },
+  size: {
+    h1: {
+      medium: 40,
+      small: 32
+    },
+    h2: {
+      medium: 32,
+      small: 26
+    },
+    h6: {
+      medium: 16,
+      small: 12
+    },
+    h3: 28
+  },
+};
+ 
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+ 
+# Typography
+
+
+
+## H1 Heading
+
+**Font:** Roboto
+
+**Weights:** 500(bold), 700(extrabold)
+
+**Font Size:** 40px(Medium), 32px(Small)
+
+<Typeset
+  fontSizes={[
+    typography.size.h1.medium,
+    typography.size.h1.small,
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## H2 Heading
+
+**Font:** Roboto
+
+**Weights:** 500(bold), 700(extrabold)
+
+**Font Size:** 32px(Medium), 26px(Small)
+
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.h2.medium),
+    Number(typography.size.h2.small),
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+## H6 Heading
+
+**Font:** Roboto
+
+**Weights:** 500(bold), 700(extrabold)
+
+**Font Size:** 16px(Medium), 12px(Small)
+
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.h6.medium),
+    Number(typography.size.h6.small),
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
