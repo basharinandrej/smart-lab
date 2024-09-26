@@ -41,9 +41,3 @@ export const ButtonIcon: Story = {
   },
 };
 
-
-/*
-* - typography
-* - themes
-* - deploy
-* */

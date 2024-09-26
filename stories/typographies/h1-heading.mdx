@@ -1,0 +1,76 @@
+import { Meta, Typeset } from '@storybook/blocks'
+ 
+<Meta title="Typography/H1 Heading" />
+ 
+export const typography = {
+  type: {
+    primary: 'Roboto, sans-serif',
+  },
+  weight: {
+    regular: '400',
+    medium: '500',
+    bold: '700',
+  },
+  size: {
+    h1: {
+      medium: 40,
+      small: 32
+    }
+  },
+};
+ 
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+ 
+# Typography
+
+
+
+## H1 Heading
+
+**Font:** Roboto
+
+**Weight:** 400(regular)
+
+**Font Size:** 40px(Medium), 32px(Small)
+
+<Typeset
+  fontSizes={[
+    typography.size.h1.medium,
+    typography.size.h1.small,
+  ]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+**Font:** Roboto
+
+**Weight:** 500(medium)
+
+**Font Size:** 40px(Medium), 32px(Small)
+
+<Typeset
+  fontSizes={[
+    typography.size.h1.medium,
+    typography.size.h1.small,
+  ]}
+  fontWeight={typography.weight.medium}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+**Font:** Roboto
+
+**Weight:** 700(bold)
+
+**Font Size:** 40px(Medium), 32px(Small)
+
+<Typeset
+  fontSizes={[
+    typography.size.h1.medium,
+    typography.size.h1.small,
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>

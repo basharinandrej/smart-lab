@@ -33,6 +33,7 @@ export const createButton = ({
   loaderElement && buttonElement.insertAdjacentElement('afterbegin', loaderElement)
 
   buttonElement.className = [
+    'ds',
     'ds--button',
 
     getClassNamesByTypes(type),
