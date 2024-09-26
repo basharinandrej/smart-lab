@@ -12,15 +12,24 @@
 
         &-loader
             display: none
+
             -webkit-animation: spin 1s linear infinite
             animation: spin 1s linear infinite
+
             border: base(.5) solid var(--color-base)
             border-top: base(.5) solid transparent
             border-radius: 50%
 
         &--loading
+            .ds--button-paragraph
+                opacity: 0
+
             .ds--button-loader
                 display: block
+                position: relative
+                left: 50%
+                transform: translateX(-50%)
+
             .ds--button-icon
                 display: none
 
@@ -125,7 +134,7 @@
 @keyframes spin
     to
         border-top-color: transparent
-        -webkit-transform: rotate(360deg)
-        transform: rotate(360deg)
+        -webkit-transform: translateX(-50%) rotate(360deg)
+        transform: translateX(-50%) rotate(360deg)
     
         
