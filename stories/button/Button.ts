@@ -39,6 +39,8 @@ export const createButton = ({
     getClassNamesByTypes(type),
     getClassNamesBySizes(size),
     getClassNamesByStates(state),
+    icon && !label && 'ds--button--icon-only',
+    icon && label && 'ds--button--icon-text'
   ].join(' ');
 
 
