@@ -1,0 +1,42 @@
+.ds-badge {
+    height: min-content;
+    width: min-content;
+    border-radius: 99px;
+}
+
+/* size */
+.ds-badge-size-big {
+   padding: 5px 10px;
+}
+
+.ds-badge-size-default {
+    padding: 4px 8px
+}
+
+.ds-badge-size-small {
+    padding: 3px 6px
+}
+
+/* type+color */
+/* solid */
+.ds-badge-type-solid.ds-badge-color-primary {
+    background: var(--color-primary-500);
+    color: white;
+ }
+ 
+ .ds-badge-type-solid.ds-badge-color-gray {
+    background: var(--color-neutral-400);
+    color: white;
+}
+
+/* soft */
+.ds-badge-type-soft.ds-badge-color-primary {
+    background: var(--color-primary-400);
+    color: var(--color-primary-600);
+ }
+ 
+ .ds-badge-type-soft.ds-badge-color-gray {
+    background: var(--color-neutral-300);
+    color: var(--color-neutral-500);
+}
+ 
