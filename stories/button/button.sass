@@ -9,7 +9,30 @@
         border: transparent
         color: var(--color-base)
         cursor: pointer
-        font-family: sans-serif /*todo Roboto*/
+        position: relative
+
+        &-loader
+            display: none
+
+            -webkit-animation: spin 1s linear infinite
+            animation: spin 1s linear infinite
+
+            border: base(.5) solid var(--color-base)
+            border-top: base(.5) solid transparent
+            border-radius: 50%
+
+        &--loading
+            .ds--button-paragraph
+                opacity: 0
+
+            .ds--button-loader
+                display: block
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+
+            .ds--button-icon
+                opacity: 0
 
         &-icon
             display: block
@@ -17,6 +40,8 @@
 
         &-paragraph
             margin: base(0)
+            font-size: 16px
+            font-weight: 400
 
         &--primary
             &.ds--button--default
@@ -36,9 +61,7 @@
 
             &.ds--button--active
                 background-color: var(--color-primary-600)
-
-
-        &--gray /*todo Заменить на secondary*/
+        &--secondary
             &.ds--button--default
                 background-color: var(--color-neutral-400)
 
@@ -59,29 +82,91 @@
 
 
         &--small
-            padding: base(1) base(4)
+            padding: 5px 14px
             font-size: 13px
+            font-weight: 400
+            line-height: 16px
+
+            &.ds--button--icon-only
+                padding: 5px
+
+                .ds--button-icon
+                    width: 15px
+                    height: 15px
+
+                .ds--button-loader
+                    width: 15px
+                    height: 15px
+
+            & .ds--button-loader
+                height: 13px
+                width: 13px
 
             & .ds--button-icon
-                margin-right: base(1)
-                width: 15px
-                height: 15px
+                margin-right: 4px
+                width: 13px
+                height: 13px
+
         &--medium
-            padding: base(2) base(5)
+            padding: 9px 18px
             font-size: 14px
+            font-weight: 400
+            line-height: 17px
+
+            &.ds--button--icon-only
+                padding: 7px
+
+                .ds--button-icon
+                    width: 20px
+                    height: 20px
+
+                .ds--button-loader
+                    width: 20px
+                    height: 20px
+
+            & .ds--button-loader
+                height: 16px
+                width: 16px
 
             & .ds--button-icon
-                margin-right: base(2)
+                margin-right: 5px
                 width: 20px
                 height: 20px
+
         &--big
-            padding: base(3) base(6)
+            padding: 13px 22px
             font-size: 16px
+            font-weight: 400
+            line-height: 19px
+
+            &.ds--button--icon-only
+                padding: 9px
+
+                .ds--button-icon
+                    width: 27px
+                    height: 27px
+
+                .ds--button-loader
+                    width: 27px
+                    height: 27px
+
+            & .ds--button-loader
+                height: 19px
+                width: 19px
 
             & .ds--button-icon
-                margin-right: base(2)
-                width: 24px
-                height: 24px
+                margin-right: 7px
+                width: 19px
+                height: 19px
 
 
-
+        &--icon-only
+            .ds--button-icon
+                margin-right: 0
+@keyframes spin
+    to
+        border-top-color: transparent
+        -webkit-transform: translateX(-50%) rotate(360deg)
+        transform: translateX(-50%) rotate(360deg)
+    
+        

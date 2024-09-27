@@ -16,25 +16,31 @@ export const createButton = ({
   const buttonElement = document.createElement('button');
   const paragraphElement = document.createElement('p')
   const iconElement = document.createElement('div')
+  const loaderElement = document.createElement('div')
 
   buttonElement.type = 'button';
   buttonElement.addEventListener('click', onClick);
 
   paragraphElement.setAttribute('class', 'ds--button-paragraph')
   iconElement.setAttribute('class', 'ds--button-icon')
+  loaderElement.setAttribute('class', 'ds--button-loader')
 
   paragraphElement.innerText = label
   iconElement.insertAdjacentHTML('afterbegin', icon)
 
   label && buttonElement.insertAdjacentElement('afterbegin', paragraphElement);
   icon && buttonElement.insertAdjacentElement('afterbegin', iconElement)
+  loaderElement && buttonElement.insertAdjacentElement('afterbegin', loaderElement)
 
   buttonElement.className = [
+    'ds',
     'ds--button',
 
     getClassNamesByTypes(type),
     getClassNamesBySizes(size),
     getClassNamesByStates(state),
+    icon && !label && 'ds--button--icon-only',
+    icon && label && 'ds--button--icon-text'
   ].join(' ');
 
 
