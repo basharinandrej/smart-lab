@@ -11,7 +11,10 @@ const blogPage: Meta = {
   render: () => {
     return renderPage()
   },
-  tags: ['!autodocs']
+  tags: ['!autodocs'],
+  parameters: {
+    layout: 'fullscreen'
+  }
 }
 
 export default blogPage;
@@ -24,9 +27,10 @@ const renderPage = () => {
   return append(
     root,
     layout(
-      `<span>left</span>`,
-      `<span>main</span>`,
-      `<span>right${badge('badge')}</span>`
+      badge('header'),
+      `<span>${badge('left')}</span>`,
+      `<span>${badge('main')}</span>`,
+      `<span>${badge('right')}</span>`
     )
   )
 }

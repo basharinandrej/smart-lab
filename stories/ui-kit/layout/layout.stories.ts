@@ -10,11 +10,15 @@ const LayoutMeta: Meta = {
     return createElement(
         'div',
         layout(
+            'header',
             `left`,
             `main`,
             `right`
         ))
   },
+  parameters: {
+    layout: 'fullscreen'
+  }
 }
 
 export default LayoutMeta;
