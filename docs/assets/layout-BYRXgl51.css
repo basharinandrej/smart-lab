@@ -1,0 +1,1 @@
+.sb-main-fullscreen,#storybook-root{min-height:100vh}.ds-layout{display:flex;flex-direction:column;min-height:100vh;flex-grow:1}.ds-layout-header{height:70px}.ds-layout-content{display:flex;flex-grow:1}.ds-layout-left,.ds-layout-right{background:#d8d8d8;flex-grow:1}.ds-layout-main{background:#a9a7a7;flex-grow:3}
