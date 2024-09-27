@@ -7,14 +7,12 @@ type Story = StoryObj;
 const LayoutMeta: Meta = {
   title: 'UI-KIT/Layout',
   render: () => {
-    return createElement(
-        'div',
-        layout(
-            'header',
-            `left`,
-            `main`,
-            `right`
-        ))
+    return layout(
+      'header',
+      `left`,
+      `main`,
+      `right`
+    )
   },
   parameters: {
     layout: 'fullscreen'

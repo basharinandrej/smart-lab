@@ -22,15 +22,11 @@ export default blogPage;
 export const BlogPageMock: Story = {};
 
 const renderPage = () => {
-  const root = document.createElement('div')
 
-  return append(
-    root,
-    layout(
-      badge('header'),
-      `<span>${badge('left')}</span>`,
-      `<span>${badge('main')}</span>`,
-      `<span>${badge('right')}</span>`
-    )
+  return layout(
+    badge({text: 'header'}),
+    `<span>${badge({text: 'left'})}</span>`,
+    `<span>${badge({text: 'main'})}</span>`,
+    `<span>${badge({text: 'right'})}</span>`
   )
 }
