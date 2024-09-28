@@ -7,8 +7,14 @@ export const badge = ({
   color = BadgeColor.Primary
 }: BadgeProps) => {
 
+  const classNames = [
+    type,
+    size,
+    color
+  ].join(' ')
+
   return `
-      <div class="ds-badge">${text}</div>
+      <div class="ds-badge ${classNames}">${text}</div>
     `
 }
 
