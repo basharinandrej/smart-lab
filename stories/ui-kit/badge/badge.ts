@@ -1,3 +1,4 @@
+import cl from 'classnames'
 import './badge.css'
 
 export const badge = ({
@@ -6,6 +7,12 @@ export const badge = ({
   size = BadgeSize.Default,
   color = BadgeColor.Primary
 }: BadgeProps) => {
+
+  try {
+    console.log('>>>>> cl(type, size, color)', cl(type, size, color))
+  } catch (error) {
+    console.log('>>>> error', error)
+  }
   return `
       <div class="ds-badge">${text}</div>
     `
