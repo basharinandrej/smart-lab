@@ -1,23 +1,23 @@
-import type {Args, Meta, StoryObj} from '@storybook/html';
+import type {Args, ArgTypes, Meta, StoryObj} from '@storybook/html';
 import { badge, BadgeColor, BadgeProps, BadgeSize, BadgeType } from './badge';
 import { convertMapToControl } from '../../tools/convert-map-to-control';
 
-const controls: Args = {
+const controls: ArgTypes<BadgeProps> = {
   text: {
     description: 'Текст в бейдже',
     control: { type: 'text' },
   },
   type: {
     description: 'Тип бейджа',
-    ...convertMapToControl(BadgeType)
+    ...convertMapToControl(BadgeType),
   },
   size: {
     description: 'Размер бейджа',
-    ...convertMapToControl(BadgeSize)
+    ...convertMapToControl(BadgeSize),
   },
   color: {
     description: 'Цвет бейджа',
-    ...convertMapToControl(BadgeColor)
+    ...convertMapToControl(BadgeColor),
   },
 }
 
