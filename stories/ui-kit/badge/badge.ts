@@ -1,5 +1,6 @@
 import cl from 'classnames'
 import './badge.css'
+import { ValueOf } from '../../tools/types'
 
 export const badge = ({
   text,
@@ -14,23 +15,23 @@ export const badge = ({
 
 export interface BadgeProps {
   text: string
-  type?: BadgeType
-  size?: BadgeSize
-  color?: BadgeColor
+  type?: ValueOf<typeof BadgeType>
+  size?: ValueOf<typeof BadgeSize>
+  color?: ValueOf<typeof BadgeColor>
 }
 
-export enum BadgeType {
-  Solid = 'ds-badge-type-solid',
-  Soft = 'ds-badge-type-soft'
-}
+export const BadgeType = {
+  Solid: 'ds-badge-type-solid',
+  Soft: 'ds-badge-type-soft'
+} as const
 
-export enum BadgeSize {
-  Default = 'ds-badge-size-default',
-  Small = 'ds-badge-size-small',
-  Big = 'ds-badge-size-big'
-}
+export const BadgeSize = {
+  Default: 'ds-badge-size-default',
+  Small: 'ds-badge-size-small',
+  Big: 'ds-badge-size-big'
+} as const
 
-export enum BadgeColor {
-  Primary = 'ds-badge-color-primary',
-  Gray = 'ds-badge-color-gray'
-}
+export const BadgeColor = {
+  Primary: 'ds-badge-color-primary',
+  Gray: 'ds-badge-color-gray'
+} as const
