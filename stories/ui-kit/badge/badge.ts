@@ -14,7 +14,7 @@ export const badge = ({
   ].join(' ')
 
   return `
-      <div class="ds-badge ${classNames}">${text}</div>
+      <div class="ds-badge ${classNames}">${text}__</div>
     `
 }
 
