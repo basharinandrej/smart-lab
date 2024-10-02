@@ -1,30 +1,23 @@
-import type {ArgTypes, Meta, StoryObj} from '@storybook/html';
+import type {Args, ArgTypes, Meta, StoryObj} from '@storybook/html';
 import { badge, BadgeColor, BadgeProps, BadgeSize, BadgeType } from './badge';
-import { createElement } from '../../renderer/create-element';
+import { convertMapToControl } from '../../tools/convert-map-to-control';
 
-
-type Controls = Partial<ArgTypes<BadgeProps>>
-type Story = StoryObj;
-
-const controls: Controls = {
+const controls: ArgTypes<BadgeProps> = {
   text: {
     description: 'Текст в бейдже',
     control: { type: 'text' },
   },
   type: {
     description: 'Тип бейджа',
-    control: { type: 'select'},
-    options: [BadgeType.Solid, BadgeType.Soft],
+    ...convertMapToControl(BadgeType),
   },
   size: {
     description: 'Размер бейджа',
-    control: { type: 'select'},
-    options: [BadgeSize.Default, BadgeSize.Big, BadgeSize.Small],
+    ...convertMapToControl(BadgeSize),
   },
   color: {
     description: 'Цвет бейджа',
-    control: { type: 'select'},
-    options: [BadgeColor.Primary, BadgeColor.Gray],
+    ...convertMapToControl(BadgeColor),
   },
 }
 
@@ -44,5 +37,4 @@ const BadgeMeta: Meta = {
 
 export default BadgeMeta;
 
-export const Badge: Story = {};
-
+export const Badge: StoryObj = {};
