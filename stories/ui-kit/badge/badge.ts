@@ -8,7 +8,12 @@ export const badge = ({
   color = BadgeColor.Primary
 }: BadgeProps) => {
   return `
-      <div class="ds-badge ${cl(type, size, color)}">${text}</div>
+      <div class="ds-badge ${cl(type, size, color)}">
+        ${text}
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use href="#star" />
+        </svg>
+      </div>
     `
 }
 
