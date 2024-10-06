@@ -26,7 +26,11 @@ export const createButton = ({
   loaderElement.setAttribute('class', 'ds--button-loader')
 
   paragraphElement.innerText = label
-  iconElement.insertAdjacentHTML('afterbegin', icon)
+  iconElement.insertAdjacentHTML('afterbegin', `
+    <svg viewBox="0 0 24 24">
+      <use href=${icon ? '#trash' : null} />
+    </svg>
+  `)
 
   label && buttonElement.insertAdjacentElement('afterbegin', paragraphElement);
   icon && buttonElement.insertAdjacentElement('afterbegin', iconElement)

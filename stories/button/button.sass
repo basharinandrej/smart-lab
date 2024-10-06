@@ -1,11 +1,10 @@
-@import "/functions.sass"
+@import "/styles/functions.sass"
 
 .ds
     &--button
         display: flex
         align-items: center
 
-        border-radius: 5px
         border: transparent
         color: var(--color-base)
         cursor: pointer
@@ -37,6 +36,7 @@
         &-icon
             display: block
             stroke: var(--color-base)
+            fill: transparent
 
         &-paragraph
             margin: base(0)
@@ -86,6 +86,7 @@
             font-size: 13px
             font-weight: 400
             line-height: 16px
+            border-radius: 5px
 
             &.ds--button--icon-only
                 padding: 5px
@@ -112,6 +113,7 @@
             font-size: 14px
             font-weight: 400
             line-height: 17px
+            border-radius: 6px
 
             &.ds--button--icon-only
                 padding: 7px
@@ -138,6 +140,7 @@
             font-size: 16px
             font-weight: 400
             line-height: 19px
+            border-radius: 8px
 
             &.ds--button--icon-only
                 padding: 9px
