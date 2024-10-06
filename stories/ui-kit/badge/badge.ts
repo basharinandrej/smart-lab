@@ -8,9 +8,7 @@ export const badge = ({
   color = BadgeColor.Primary
 }: BadgeProps) => {
   return `
-      <div class="ds--badge ${cl(type, size, color)}">
-        ${text}
-      </div>
+      <div class="ds--badge ${cl(type, size, color)}">${text}</div>
     `
 }
 
