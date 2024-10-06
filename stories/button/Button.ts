@@ -28,7 +28,7 @@ export const createButton = ({
   paragraphElement.innerText = label
   iconElement.insertAdjacentHTML('afterbegin', `
     <svg viewBox="0 0 24 24">
-      <use href=${icon} />
+      <use href=${icon ? '#trash' : null} />
     </svg>
   `)
 
