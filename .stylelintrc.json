@@ -1,0 +1,28 @@
+{
+  "rules": {
+    "selector-max-id": [
+      1,
+      {
+        "message": "ID используется только для svg sprite в global.css. Используй селектор класса или important"
+      }
+    ],
+    "color-named": [
+       "never",
+       {
+        "message": "Не используй color-named для цветов, используй токены"
+      }
+    ],
+    "selector-class-pattern": [
+      "ds--[a-z]+",
+      {
+        "message": "У каждого класса должен быть префикс ds--"
+      }
+    ],
+    "color-no-hex": [
+      true, 
+      {
+        "message": "Не используй hex для цветов, используй токены"
+      }
+    ]
+  }
+}

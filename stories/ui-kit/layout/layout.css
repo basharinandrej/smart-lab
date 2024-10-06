@@ -1,5 +1,6 @@
 /* переопределение стилей сторибука
 надо найти получше вариант!!! */
+/* stylelint-disable */
 .sb-main-fullscreen {
     min-height: 100vh;
 }
@@ -9,29 +10,29 @@
 }
 
 /* стили компонента */
-.ds-layout {
+.ds--layout {
    display: flex;
    flex-direction: column;
    min-height: 100vh;
    flex-grow: 1;
 }
 
-.ds-layout-header {
+.ds--layout-header {
     height: 70px;
  }
 
-.ds-layout-content {
+.ds--layout-content {
     display: flex;
     flex-grow: 1;
 }
 
-.ds-layout-left,
-.ds-layout-right {
-    background: rgb(216, 216, 216); /* вынести в сторю */
+.ds--layout-left,
+.ds--layout-right {
+    background: rgb(216 216 216); /* вынести в сторю */
     flex-grow: 1;
 }
 
-.ds-layout-main {
-    background: rgb(169, 167, 167); /* вынести в сторю */
+.ds--layout-main {
+    background: rgb(169 167 167); /* вынести в сторю */
     flex-grow: 3;
 }
