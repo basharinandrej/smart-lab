@@ -1,6 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/html';
 import { layout } from '../../ui-kit/layout/layout';
-import { createElement } from '../../renderer/create-element';
 
 type Story = StoryObj;
 
