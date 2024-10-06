@@ -8,7 +8,7 @@ export const badge = ({
   color = BadgeColor.Primary
 }: BadgeProps) => {
   return `
-      <div class="ds-badge ${cl(type, size, color)}">${text}</div>
+      <div class="ds--badge ${cl(type, size, color)}">${text}</div>
     `
 }
 
@@ -20,17 +20,17 @@ export interface BadgeProps {
 }
 
 export enum BadgeType {
-  Solid = 'ds-badge-type-solid',
-  Soft = 'ds-badge-type-soft'
+  Solid = 'ds--badge--solid',
+  Soft = 'ds--badge--soft'
 }
 
 export enum BadgeSize {
-  Default = 'ds-badge-size-default',
-  Small = 'ds-badge-size-small',
-  Big = 'ds-badge-size-big'
+  Default = 'ds--badge--default',
+  Small = 'ds--badge--small',
+  Big = 'ds--badge--big'
 }
 
 export enum BadgeColor {
-  Primary = 'ds-badge-color-primary',
-  Gray = 'ds-badge-color-gray'
+  Primary = 'ds--badge--primary',
+  Secondary = 'ds--badge--secondary'
 }

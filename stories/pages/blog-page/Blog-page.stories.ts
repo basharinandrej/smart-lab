@@ -1,7 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/html';
 import { layout } from '../../ui-kit/layout/layout';
 import { badge } from '../../ui-kit/badge/badge';
-import { append } from '../../renderer/append';
 
 type Story = StoryObj;
 
