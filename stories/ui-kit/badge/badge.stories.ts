@@ -1,4 +1,4 @@
-import type {Args, ArgTypes, Meta, StoryObj} from '@storybook/html';
+import type { ArgTypes, Meta, StoryObj} from '@storybook/html';
 import { badge, BadgeColor, BadgeProps, BadgeSize, BadgeType } from './badge';
 import { convertMapToControl } from '../../tools/convert-map-to-control';
 
