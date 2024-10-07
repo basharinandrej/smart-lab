@@ -1,5 +1,4 @@
 body[data-theme='light'] {
-  /* stylelint-disable */
   --color-base: #fff;
 
   --color-primary-400: #7BB7E0;
