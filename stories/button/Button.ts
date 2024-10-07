@@ -3,7 +3,7 @@ import {getClassNamesByTypes} from "./helpers/get-class-names-by-sizes";
 import {getClassNamesBySizes} from "./helpers/get-class-names-by-types";
 import {getClassNamesByStates} from "./helpers/get-class-names-by-states";
 
-import './button.sass';
+import './button.css';
 
 export const createButton = ({
   label,

@@ -4,4 +4,4 @@ storybook-static
 .idea
 .DS_Store
 package-lock.json
-doto.txt
+todo.txt
