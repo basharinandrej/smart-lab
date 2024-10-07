@@ -3,7 +3,6 @@ import {svgSpriteDecorator} from "./decorators/svg-sprite-decorator";
 import {themeDecorator} from "./decorators/theme-decorator";
 
 import '/styles/global.css'
-import '/styles/variables.css'
 import '/styles/variables-dark.css'
 import '/styles/variables-light.css'
 import '/styles/fonts.css'
