@@ -8,7 +8,7 @@ import './button.css';
 export const createButton = ({
   label,
   onClick,
-  size = SizeButton.Medium,
+  size = SizeButton.Default,
   type = TypeButton.Primary,
   state = StateButton.Default,
   icon
@@ -43,8 +43,8 @@ export const createButton = ({
     getClassNamesByTypes(type),
     getClassNamesBySizes(size),
     getClassNamesByStates(state),
-    icon && !label && 'ds--button--icon-only',
-    icon && label && 'ds--button--icon-text'
+    (icon && !label) ? 'ds--button--icon-only' : '',
+    (icon && label) ? 'ds--button--icon-text' : ''
   ].join(' ');
 
 

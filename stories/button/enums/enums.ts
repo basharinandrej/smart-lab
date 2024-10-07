@@ -1,7 +1,7 @@
 
 export const enum SizeButton {
   Small = 'Small',
-  Medium = 'Medium',
+  Default = 'Default',
   Big = 'Big'
 }
 

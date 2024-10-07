@@ -12,8 +12,8 @@
 
             animation: spin 1s linear infinite;
 
-            border: 2px solid var(--color-base);
-            border-top: 2px solid transparent;
+            border: 1.5px solid var(--color-base);
+            border-top: 1.5px solid transparent;
             border-radius: 50%;
         }
 
@@ -43,10 +43,12 @@
 
         &-paragraph {
             margin: 0;
-            font-size: 16px;
             font-weight: 400;
         }
 
+        &--active {
+            transform: scale(0.95);
+        }
         &--primary {
             &.ds--button--default {
                 background-color: var(--color-primary-500)
@@ -68,7 +70,7 @@
             }
 
             &.ds--button--active {
-                background-color: var(--color-primary-600)
+                background-color: var(--color-primary-600);
             }        
         }
         &--secondary {
@@ -92,19 +94,23 @@
             }
 
             &.ds--button--active {
-                background-color: var(--color-neutral-500)
+                background-color: var(--color-neutral-500);
             }
         }
 
 
         
-        &--small {
-
+        &--size-small {
             padding: 5px 14px;
             font-size: 13px;
             font-weight: 400;
             line-height: 16px;
             border-radius: 5px;
+
+            & .ds--button--paragraph {
+                font-size: 13px;
+                line-height: 15.23px;
+            }
 
             &.ds--button--icon-only {
                 padding: 5px;
@@ -133,12 +139,17 @@
             }
         }
 
-        &--medium {
+        &--size-default {
             padding: 9px 18px;
             font-size: 14px;
             font-weight: 400;
             line-height: 17px;
             border-radius: 6px;
+
+            & .ds--button--paragraph {
+                font-size: 14px;
+                line-height: 16.4px;
+            }
 
             &.ds--button--icon-only {
                 padding: 7px;
@@ -161,17 +172,22 @@
 
             & .ds--button-icon {
                 margin-right: 5px;
-                width: 20px;
-                height: 20px;
+                width: 16px;
+                height: 16px;
             }
         }
 
-        &--big {
+        &--size-big {
             padding: 13px 22px;
             font-size: 16px;
             font-weight: 400;
             line-height: 19px;
             border-radius: 8px;
+
+            & .ds--button--paragraph {
+                font-size: 16px;
+                line-height: 18.75px;
+            }
 
             &.ds--button--icon-only {
                 padding: 9px;
