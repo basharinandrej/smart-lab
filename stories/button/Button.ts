@@ -7,36 +7,13 @@ import './button.css';
 
 export const createButton = ({
   label,
-  onClick,
   size = SizeButton.Default,
   type = TypeButton.Primary,
   state = StateButton.Default,
   icon
 }: Props) => {
-  const buttonElement = document.createElement('button');
-  const paragraphElement = document.createElement('p')
-  const iconElement = document.createElement('div')
-  const loaderElement = document.createElement('div')
 
-  buttonElement.type = 'button';
-  buttonElement.addEventListener('click', onClick);
-
-  paragraphElement.setAttribute('class', 'ds--button-paragraph')
-  iconElement.setAttribute('class', 'ds--button-icon')
-  loaderElement.setAttribute('class', 'ds--button-loader')
-
-  paragraphElement.innerText = label
-  iconElement.insertAdjacentHTML('afterbegin', `
-    <svg viewBox="0 0 24 24">
-      <use href=${icon ? '#trash' : null} />
-    </svg>
-  `)
-
-  label && buttonElement.insertAdjacentElement('afterbegin', paragraphElement);
-  icon && buttonElement.insertAdjacentElement('afterbegin', iconElement)
-  loaderElement && buttonElement.insertAdjacentElement('afterbegin', loaderElement)
-
-  buttonElement.className = [
+  const classNames = [
     'ds',
     'ds--button',
 
@@ -48,12 +25,27 @@ export const createButton = ({
   ].join(' ');
 
 
-  return buttonElement;
+  return `
+    <button
+      type="button"
+      class="${classNames}"
+    >
+      <div class="ds--button-loader"></div>
+      ${icon 
+        ? `<div class="ds--button-icon">
+            <svg viewBox="0 0 24 24">
+              <use href="#trash"></use>
+            </svg>
+          </div>`
+        : ''
+      }
+      <p class="ds--button-paragraph">${label}</p>
+    </button>
+  `;
 };
 
 export interface Props {
   label: string
-  onClick: () => void
   size: SizeButton
   type: TypeButton
   state: StateButton
