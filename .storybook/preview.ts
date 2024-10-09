@@ -3,8 +3,7 @@ import {svgSpriteDecorator} from "./decorators/svg-sprite-decorator";
 import {themeDecorator} from "./decorators/theme-decorator";
 
 import '/styles/global.css'
-import '/styles/variables-dark.css'
-import '/styles/variables-light.css'
+import '/styles/variables-colors.css'
 import '/styles/fonts.css'
 
 const preview: Preview = {
