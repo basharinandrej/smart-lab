@@ -3,7 +3,7 @@
         align-items: center;
 
         border: transparent;
-        color: var(--color-base);
+        color: var(--color-base-button);
         cursor: pointer;
         position: relative;
 
@@ -12,7 +12,7 @@
 
             animation: spin 1s linear infinite;
 
-            border: 1.5px solid var(--color-base);
+            border: 1.5px solid var(--color-base-button);
             border-top: 1.5px solid transparent;
             border-radius: 50%;
         }
@@ -37,7 +37,7 @@
 
         &-icon {
             display: block;
-            stroke: var(--color-base);
+            stroke: var(--color-base-button);
             fill: transparent;
         }
 
@@ -51,50 +51,50 @@
         }
         &--primary {
             &.ds--button--default {
-                background-color: var(--color-primary-500)
+                background-color: var(--color-background-primary-default)
             }
 
             &:hover,
             &.ds--button--hover {
-                background-color: var(--color-primary-600);
+                background-color: var(--color-background-primary-hover);
                 transition: .3s
             }
 
             &:disabled,
             &.ds--button--disabled {
-                background-color: var(--color-primary-400)
+                background-color: var(--color-background-primary-disabled)
             }
 
             &.ds--button--loading {
-                background-color: var(--color-primary-400)
+                background-color: var(--color-background-primary-loading)
             }
 
             &.ds--button--active {
-                background-color: var(--color-primary-600);
+                background-color: var(--color-background-primary-active);
             }        
         }
         &--secondary {
             &.ds--button--default {
-                background-color: var(--color-neutral-400)
+                background-color: var(--color-background-secondary-default)
             }
 
             &:hover,
             &.ds--button--hover {
-                background-color: var(--color-neutral-500);
+                background-color: var(--color-background-secondary-hover);
                 transition: .3s;
             }
 
             &:disabled,
             &.ds--button--disabled {
-                background-color: var(--color-neutral-300)
+                background-color: var(--color-background-secondary-disabled)
             }
 
             &.ds--button--loading {
-                background-color: var(--color-neutral-300)
+                background-color: var(--color-background-secondary-loading)
             }
 
             &.ds--button--active {
-                background-color: var(--color-neutral-500);
+                background-color: var(--color-background-secondary-active);
             }
         }
 
@@ -234,4 +234,40 @@
     }
 }
     
-        
+body[data-theme='light']  {
+    .ds--button {
+        --color-base-button: var(--white-alpha-100);
+
+        --color-background-primary-default: var(--color-primary-500);
+        --color-background-primary-hover: var(--color-primary-600);
+        --color-background-primary-disabled: var(--color-primary-400);
+        --color-background-primary-loading: var(--color-primary-400);
+        --color-background-primary-active: var(--color-primary-500);
+
+
+        --color-background-secondary-default: var(--color-neutral-400);
+        --color-background-secondary-hover: var(--color-neutral-500);
+        --color-background-secondary-disabled: var(--color-neutral-300);
+        --color-background-secondary-loading: var(--color-neutral-300);
+        --color-background-secondary-active: var(--color-neutral-400);
+    }
+}
+
+body[data-theme='dark']  {
+    .ds--button {
+        --color-base-button: var(--slate-800);
+
+        --color-background-primary-default: var(--color-primary-500);
+        --color-background-primary-hover: var(--color-primary-600);
+        --color-background-primary-disabled: var(--color-primary-800);
+        --color-background-primary-loading: var(--color-primary-800);
+        --color-background-primary-active: var(--color-primary-500);
+
+
+        --color-background-secondary-default: var(--color-neutral-400);
+        --color-background-secondary-hover: var(--color-neutral-500);
+        --color-background-secondary-disabled: var(--color-neutral-600);
+        --color-background-secondary-loading: var(--color-neutral-600);
+        --color-background-secondary-active: var(--color-neutral-400);
+    }
+}
