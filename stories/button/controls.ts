@@ -15,10 +15,10 @@ export const controls: Controls = {
     description: 'Размер кнопки',
     control: { type: 'select'},
     table: {
-      defaultValue: { summary: SizeButton.Medium },
-      type: { summary: `${SizeButton.Small}, ${SizeButton.Medium}, ${SizeButton.Big}` },
+      defaultValue: { summary: SizeButton.Default },
+      type: { summary: `${SizeButton.Small}, ${SizeButton.Default}, ${SizeButton.Big}` },
     },
-    options: [SizeButton.Big, SizeButton.Small, SizeButton.Medium],
+    options: [SizeButton.Big, SizeButton.Small, SizeButton.Default],
   },
   type: {
     description: 'Тип кнопки',
@@ -64,7 +64,7 @@ export const controls: Controls = {
 
 export const defaultProps: DefaultProps = {
   label: 'Кнопка',
-  size: SizeButton.Medium,
+  size: SizeButton.Default,
   state: StateButton.Default,
   icon: false
 }

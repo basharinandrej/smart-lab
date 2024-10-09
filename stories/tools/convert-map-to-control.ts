@@ -6,6 +6,7 @@ export const convertMapToControl = <E extends {}>(map: E) => {
         options: keys,
         mapping: map,
         table: {
+            defaultValue: {summary: keys[0]},
             type: { summary: keys.join(', ') },
         },
     })

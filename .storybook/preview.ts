@@ -2,11 +2,10 @@ import { Preview } from '@storybook/html';
 import {svgSpriteDecorator} from "./decorators/svg-sprite-decorator";
 import {themeDecorator} from "./decorators/theme-decorator";
 
-import '/styles/global.sass'
-import '/styles/variables.sass'
-import '/styles/variables-dark.sass'
-import '/styles/variables-light.sass'
-import '/styles/fonts.sass'
+import '/styles/global.css'
+import '/styles/variables-dark.css'
+import '/styles/variables-light.css'
+import '/styles/fonts.css'
 
 const preview: Preview = {
   tags: ['autodocs'],

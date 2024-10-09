@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box
+}
+.ds {
+    font-family: 'Roboto';
+}
+
+#sprite {
+    position: absolute;
+    top: -100%;
+}
