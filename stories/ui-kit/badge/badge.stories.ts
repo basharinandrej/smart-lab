@@ -4,6 +4,7 @@ import { convertMapToControl } from '../../tools/convert-map-to-control';
 
 const controls: ArgTypes<BadgeProps> = {
   text: {
+    defaultValue: { summary: 'badge' },
     description: 'Текст в бейдже',
     control: { type: 'text' },
   },
