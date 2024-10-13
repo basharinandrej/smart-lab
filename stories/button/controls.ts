@@ -50,6 +50,16 @@ export const controls: Controls = {
       StateButton.Disabled
     ]
   },
+  isFull: {
+    description: 'Размер кнопки во всю ширину контейнера',
+    table: {
+      defaultValue: { summary: 'false'},
+      type: { summary: `boolean` },
+    },
+    control: {
+      type: 'boolean',
+    }
+  },
   icon: {
     description: 'Наличие иконки',
     table: {
@@ -66,7 +76,8 @@ export const defaultProps: DefaultProps = {
   label: 'Кнопка',
   size: SizeButton.Default,
   state: StateButton.Default,
-  icon: false
+  icon: false,
+  isFull: false
 }
 type Controls = Partial<ArgTypes<Props>>
 

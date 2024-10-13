@@ -7,6 +7,12 @@
         cursor: pointer;
         position: relative;
 
+        &--full {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
         &-loader {
             display: none;
 
@@ -46,7 +52,8 @@
             font-weight: 400;
         }
 
-        &--active {
+        &--active,
+        &:active {
             transform: scale(0.95);
         }
         &--primary {
