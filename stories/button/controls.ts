@@ -25,9 +25,9 @@ export const controls: Controls = {
     control: { type: 'select' },
     table: {
       defaultValue: { summary: TypeButton.Primary },
-      type: { summary: `${TypeButton.Primary}, ${TypeButton.Secondary}` },
+      type: { summary: `${TypeButton.Primary}, ${TypeButton.Secondary}, ${TypeButton.Green}` },
     },
-    options: [TypeButton.Primary, TypeButton.Secondary]
+    options: [TypeButton.Primary, TypeButton.Secondary, TypeButton.Green]
   },
   state: {
     control: { type: 'select' },

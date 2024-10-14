@@ -1,6 +1,6 @@
 import {SizeButton, StateButton, TypeButton} from './enums/enums'
-import {getClassNamesByTypes} from "./helpers/get-class-names-by-sizes";
-import {getClassNamesBySizes} from "./helpers/get-class-names-by-types";
+import {getClassNamesByTypes} from "./helpers/get-class-names-by-types";
+import {getClassNamesBySizes} from "./helpers/get-class-names-by-sizes";
 import {getClassNamesByStates} from "./helpers/get-class-names-by-states";
 
 import './button.css';

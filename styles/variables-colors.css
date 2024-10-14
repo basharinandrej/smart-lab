@@ -18,7 +18,12 @@
   --color-neutral-600: #525252;
   --color-neutral-700: #404040;
 
-  --color-amber-500: #F9A101;
+  --color-green-300: #A5C97C;
   --color-green-400: #88B851;
+  --color-green-500: #69913B;
+  --color-green-600: #54742F;
+  --color-green-700: #3F5723;
+
+  --color-amber-500: #F9A101;
   --color-red-500: #E10505;
 } 

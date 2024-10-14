@@ -7,7 +7,8 @@ export const enum SizeButton {
 
 export const enum TypeButton {
   Primary = 'Primary',
-  Secondary = 'Secondary'
+  Secondary = 'Secondary',
+  Green = 'Green'
 }
 
 export const enum StateButton {
