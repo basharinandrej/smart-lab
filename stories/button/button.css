@@ -7,6 +7,12 @@
         cursor: pointer;
         position: relative;
 
+        &--full {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
         &-loader {
             display: none;
 
@@ -46,15 +52,17 @@
             font-weight: 400;
         }
 
-        &--active {
+        &--active,
+        &:active {
             transform: scale(0.95);
+            transition: .3s
         }
         &--primary {
             &.ds--button--default {
                 background-color: var(--color-background-primary-default)
             }
 
-            &:hover,
+            &:hover:not(:active),
             &.ds--button--hover {
                 background-color: var(--color-background-primary-hover);
                 transition: .3s
@@ -78,7 +86,7 @@
                 background-color: var(--color-background-secondary-default)
             }
 
-            &:hover,
+            &:hover:not(:active),
             &.ds--button--hover {
                 background-color: var(--color-background-secondary-hover);
                 transition: .3s;
@@ -97,7 +105,30 @@
                 background-color: var(--color-background-secondary-active);
             }
         }
+        &--green {
+            &.ds--button--default {
+                background-color: var(--color-background-green-default)
+            }
 
+            &:hover:not(:active),
+            &.ds--button--hover {
+                background-color: var(--color-background-green-hover);
+                transition: .3s;
+            }
+
+            &:disabled,
+            &.ds--button--disabled {
+                background-color: var(--color-background-green-disabled)
+            }
+
+            &.ds--button--loading {
+                background-color: var(--color-background-green-loading)
+            }
+
+            &.ds--button--active {
+                background-color: var(--color-background-green-active);
+            }
+        }
 
         
         &--size-small {
@@ -250,6 +281,13 @@ body[data-theme='light']  {
         --color-background-secondary-disabled: var(--color-neutral-300);
         --color-background-secondary-loading: var(--color-neutral-300);
         --color-background-secondary-active: var(--color-neutral-400);
+
+
+        --color-background-green-default: var(--color-green-500);
+        --color-background-green-hover: var(--color-green-600);
+        --color-background-green-disabled: var(--color-green-300);
+        --color-background-green-loading: var(--color-green-300);
+        --color-background-green-active: var(--color-green-500);
     }
 }
 
@@ -269,5 +307,12 @@ body[data-theme='dark']  {
         --color-background-secondary-disabled: var(--color-neutral-600);
         --color-background-secondary-loading: var(--color-neutral-600);
         --color-background-secondary-active: var(--color-neutral-400);
+
+
+        --color-background-green-default: var(--color-green-500);
+        --color-background-green-hover: var(--color-green-600);
+        --color-background-green-disabled: var(--color-green-700);
+        --color-background-green-loading: var(--color-green-700);
+        --color-background-green-active: var(--color-green-500);
     }
 }

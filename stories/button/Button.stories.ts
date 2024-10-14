@@ -10,7 +10,7 @@ const meta: Meta<Omit<Props, 'icon'>> = {
   render: (props: Props) => {
     return createButton(props)
   },
-  args:defaultProps,
+  args: defaultProps,
   argTypes: controls,
   parameters: {
     docs: {

@@ -25,9 +25,9 @@ export const controls: Controls = {
     control: { type: 'select' },
     table: {
       defaultValue: { summary: TypeButton.Primary },
-      type: { summary: `${TypeButton.Primary}, ${TypeButton.Secondary}` },
+      type: { summary: `${TypeButton.Primary}, ${TypeButton.Secondary}, ${TypeButton.Green}` },
     },
-    options: [TypeButton.Primary, TypeButton.Secondary]
+    options: [TypeButton.Primary, TypeButton.Secondary, TypeButton.Green]
   },
   state: {
     control: { type: 'select' },
@@ -50,6 +50,16 @@ export const controls: Controls = {
       StateButton.Disabled
     ]
   },
+  isFull: {
+    description: 'Размер кнопки во всю ширину контейнера',
+    table: {
+      defaultValue: { summary: 'false'},
+      type: { summary: `boolean` },
+    },
+    control: {
+      type: 'boolean',
+    }
+  },
   icon: {
     description: 'Наличие иконки',
     table: {
@@ -66,7 +76,8 @@ export const defaultProps: DefaultProps = {
   label: 'Кнопка',
   size: SizeButton.Default,
   state: StateButton.Default,
-  icon: false
+  icon: false,
+  isFull: false
 }
 type Controls = Partial<ArgTypes<Props>>
 

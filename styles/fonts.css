@@ -39,3 +39,10 @@
     font-style: normal;
     src: local('Roboto Bold'), local('Roboto-Bold'), url('../stories/assets/fonts/Robotobold.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'Tahoma';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Tahoma Bold'), local('Tahoma-Bold'), url('../stories/assets/fonts/Tahoma-Bold.ttf') format('ttf');
+}

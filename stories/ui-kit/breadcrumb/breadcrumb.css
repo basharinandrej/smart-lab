@@ -1,0 +1,126 @@
+.ds--breadcrumb {
+  display: flex;
+
+  &-paragraph {
+    margin: 0 5px 0 0;
+
+    font-weight: 400;
+    size: 14px;
+    line-height: 14px;
+    text-decoration: none;
+  }
+
+  &-item {
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+    align-items: center;
+  }
+  &-item:last-child{
+    margin-right: 0;
+
+    .ds--breadcrumb-paragraph {
+      color: var(--color-text-active);
+    }
+    .ds--breadcrumb-icon--front {
+      stroke: var(--color-text-active)
+    }
+    .ds--breadcrumb-icon--end {
+      display: none;
+    }
+  }
+  
+
+  &-item--default {
+    .ds--breadcrumb-paragraph {
+      color: var(--color-text-default);
+    }
+    .ds--breadcrumb-icon {
+      stroke: var(--color-text-default);
+    }
+    .ds--breadcrumb-icon--end {
+      opacity: 1;
+    }
+  }
+
+  &-item--active,
+  &-item:active {
+    .ds--breadcrumb-paragraph {
+      color: var(--color-text-active);
+    }
+    .ds--breadcrumb-icon--front {
+      stroke: var(--color-text-active);
+    }
+    .ds--breadcrumb-icon--end {
+      transition: .3s;
+      opacity: 0;
+    }
+  }
+
+  &-item--hover,
+  &-item:hover {
+    .ds--breadcrumb-paragraph {
+      transition: .3s;
+      color: var(--color-text-hover);
+    }
+    .ds--breadcrumb-icon--front {
+      transition: .3s;
+      stroke: var(--color-text-hover);
+    }
+    .ds--breadcrumb-icon--end {
+      stroke: var(--color-icon-end-hover);
+      opacity: 1;
+    }
+  }
+
+  &-item--disabled:last-child,
+  &-item--disabled:hover,
+  &-item--disabled:active,
+  &-item--disabled {
+    .ds--breadcrumb-paragraph {
+      color: var(--color-text-disabled);
+    }
+    .ds--breadcrumb-icon--front {
+      stroke: var(--color-text-disabled);
+    }
+    .ds--breadcrumb-icon--end {
+      stroke: var(--color-text-disabled);
+      opacity: 1;
+    }
+  }
+
+
+  &-icon {
+    width: 13px;
+    height: 13px;
+
+    &--front {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+  }
+}
+
+
+body[data-theme='light']  {
+  .ds--breadcrumb {
+    --color-text-default: var(--color-neutral-500);
+    --color-text-active: var(--color-neutral-700);
+    --color-text-disabled: var(--color-neutral-400);
+
+    --color-text-hover: var(--color-neutral-700);
+    --color-icon-end-hover: var(--color-neutral-500);
+  }
+}
+
+body[data-theme='dark']  {
+  .ds--breadcrumb {
+    --color-text-default: var(--color-neutral-300);
+    --color-text-active: var(--color-neutral-50);
+    --color-text-disabled: var(--color-neutral-400);
+
+    --color-text-hover: var(--color-neutral-100);
+    --color-icon-end-hover: var(--color-neutral-100);
+  }
+}

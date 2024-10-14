@@ -1,6 +1,6 @@
 import {SizeButton, StateButton, TypeButton} from './enums/enums'
-import {getClassNamesByTypes} from "./helpers/get-class-names-by-sizes";
-import {getClassNamesBySizes} from "./helpers/get-class-names-by-types";
+import {getClassNamesByTypes} from "./helpers/get-class-names-by-types";
+import {getClassNamesBySizes} from "./helpers/get-class-names-by-sizes";
 import {getClassNamesByStates} from "./helpers/get-class-names-by-states";
 
 import './button.css';
@@ -10,7 +10,8 @@ export const createButton = ({
   size = SizeButton.Default,
   type = TypeButton.Primary,
   state = StateButton.Default,
-  icon
+  icon,
+  isFull
 }: Props) => {
 
   const classNames = [
@@ -21,7 +22,8 @@ export const createButton = ({
     getClassNamesBySizes(size),
     getClassNamesByStates(state),
     (icon && !label) ? 'ds--button--icon-only' : '',
-    (icon && label) ? 'ds--button--icon-text' : ''
+    (icon && label) ? 'ds--button--icon-text' : '',
+    isFull ? 'ds--button--full': '',
   ].join(' ');
 
 
@@ -50,5 +52,6 @@ export interface Props {
   type: TypeButton
   state: StateButton
   icon?: string
+  isFull?: boolean 
 }
 

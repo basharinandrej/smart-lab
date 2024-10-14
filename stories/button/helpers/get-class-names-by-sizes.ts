@@ -1,11 +1,12 @@
-import {TypeButton} from "../enums/enums";
+import {SizeButton} from "../enums/enums";
 
 
-export const getClassNamesByTypes = (type: TypeButton) => {
-  const typesMap: Record<TypeButton, string> = {
-    [TypeButton.Primary]: 'ds--button--primary',
-    [TypeButton.Secondary]: 'ds--button--secondary'
+export const getClassNamesBySizes = (size: SizeButton) => {
+  const sizesMap: Record<SizeButton, string> = {
+    [SizeButton.Small]: 'ds--button--size-small',
+    [SizeButton.Default]: 'ds--button--size-default',
+    [SizeButton.Big]: 'ds--button--size-big',
   }
 
-  return typesMap[type]
+  return sizesMap[size]
 }
