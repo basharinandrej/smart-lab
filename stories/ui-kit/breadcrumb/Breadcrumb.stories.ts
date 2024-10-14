@@ -5,7 +5,7 @@ import {convertMapToControl} from '../../tools/convert-map-to-control'
 
 type Story = StoryObj<{}>;
 
-const meta: Meta<Omit<{}, 'icon'>> = {
+const meta: Meta<Props> = {
   title: 'UI-KIT/Breadcrumb',
   render: (props: Props) => {
     return createBreadcrumb(props)
