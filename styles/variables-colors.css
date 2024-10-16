@@ -1,6 +1,7 @@
 :root {
   --white-alpha-100: #fff;
   --slate-800: #202225;
+  --color-slate-700: #2A2C30;
 
 
   --color-primary-400: #7BB7E0;
@@ -27,4 +28,8 @@
 
   --color-amber-500: #F9A101;
   --color-red-500: #E10505;
+
+  --color-block-border-light: rgb(0, 0, 0, 10%);
+  --color-block-border-dark: rgb(255, 255, 255, 12%);
+
 } 
