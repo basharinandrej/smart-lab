@@ -1,25 +1,16 @@
 import {createBreadcrumb, Props} from './Breadcrumb';
-import type {Meta, StoryObj} from '@storybook/html';
-import { BreadcrumbState } from './enums/enums';
-import {convertMapToControl} from '../../tools/convert-map-to-control'
+import type {Meta} from '@storybook/html';
+import {defaultProps, controls} from './controls'
+import { Story } from '../types';
 
-type Story = StoryObj<{}>;
 
 const meta: Meta<Props> = {
   title: 'UI-KIT/Breadcrumb',
   render: (props: Props) => {
     return createBreadcrumb(props)
   },
-  args: {
-    length: 5,
-    state: BreadcrumbState.Default
-  },
-  argTypes: {
-    state: {
-      description: 'Состояние хлебных крошек',
-      ...convertMapToControl(BreadcrumbState)
-    }
-  },
+  args: defaultProps,
+  argTypes: controls,
   parameters: {
     docs: {
       description: {
