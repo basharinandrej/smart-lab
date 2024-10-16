@@ -90,7 +90,7 @@ body[data-theme='light']  {
   .ds--card {
     --color-block-border: var(--color-block-border-light);
 
-    --color-background: var(--white-alpha-100)
+    --color-background: var(--color-white-alpha-100)
   }
 }
 

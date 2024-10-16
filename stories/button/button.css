@@ -267,7 +267,7 @@
     
 body[data-theme='light']  {
     .ds--button {
-        --color-base-button: var(--white-alpha-100);
+        --color-base-button: var(--color-white-alpha-100);
 
         --color-background-primary-default: var(--color-primary-500);
         --color-background-primary-hover: var(--color-primary-600);
@@ -293,7 +293,7 @@ body[data-theme='light']  {
 
 body[data-theme='dark']  {
     .ds--button {
-        --color-base-button: var(--slate-800);
+        --color-base-button: var(--color-slate-800);
 
         --color-background-primary-default: var(--color-primary-500);
         --color-background-primary-hover: var(--color-primary-600);
