@@ -17,9 +17,9 @@ export const createBreadcrumb = ({
     getClassNamesByStates(state)
   ]
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document?.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.ds--breadcrumb')
-      .addEventListener('click', (e) => e.preventDefault())
+      ?.addEventListener('click', (e) => e.preventDefault())
   })
 
   const itemBreadcrumb = `

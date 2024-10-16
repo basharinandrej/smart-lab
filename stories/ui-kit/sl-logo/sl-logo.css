@@ -4,10 +4,14 @@
   &-paragraph {
     margin: 0;
     text-align: end;
+    color: var(--color-base-logo);
+    font-family: Tahoma;
+    font-weight: 700;
   }
   &-subparagraph {
     margin: 0;
     text-align: end;
+    color: var(--color-base-logo);
 
     font-family: Tahoma;
     font-size: 10px;
@@ -21,9 +25,7 @@
       height: 10px;
     }
     .ds--logo-paragraph {
-      font-family: Tahoma;
       font-size: 33px;
-      font-weight: 700;
       line-height: 33px;
     }
   }
@@ -33,9 +35,7 @@
       height: 8px;
     }
     .ds--logo-paragraph {
-      font-family: Tahoma;
       font-size: 25px;
-      font-weight: 700;
       line-height: 25px;
     }
     .ds--logo-subparagraph {
@@ -48,9 +48,7 @@
       height: 5px;
     }
     .ds--logo-paragraph {
-      font-family: Tahoma;
       font-size: 19px;
-      font-weight: 700;
       line-height: 19px;
     }
     .ds--logo-subparagraph {
@@ -62,22 +60,22 @@
 
   &--amber {
     .ds--logo-label {
-      background: var(--color-amber-500);
+      background: var(--color-background-amber);
     }
   }
   &--green {
     .ds--logo-label {
-      background: var(--color-green-400);
+      background: var(--color-background-green);
     }
   }
   &--primary {
     .ds--logo-label {
-      background: var(--color-primary-700);
+      background: var(--color-background-primary);
     }
   }
   &--red {
     .ds--logo-label {
-      background: var(--color-red-500);
+      background: var(--color-background-red);
     }
   }
 
@@ -89,5 +87,22 @@
     display: block;
     margin-top: 4px;
   }
+}
 
+body[data-theme='light']  {
+  --color-base-logo: var(--color-neutral-700);
+
+  --color-background-amber: var(--color-amber-500);
+  --color-background-green: var(--color-green-400);
+  --color-background-primary: var(--color-primary-700);
+  --color-background-red: var(--color-red-500);
+}
+
+body[data-theme='dark']  {
+  --color-base-logo: var(--color-neutral-200);
+
+  --color-background-amber: var(--color-amber-500);
+  --color-background-green: var(--color-green-400);
+  --color-background-primary: var(--color-primary-700);
+  --color-background-red: var(--color-red-500);
 }
