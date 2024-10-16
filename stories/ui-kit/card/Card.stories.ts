@@ -1,27 +1,16 @@
 import {createCard, Props} from './Card';
-import type {Meta, StoryObj} from '@storybook/html';
-import {convertMapToControl} from '../../tools/convert-map-to-control'
-import { PaddingsCard } from './enums/enums';
+import type {Meta} from '@storybook/html';
+import { Story } from '../types';
+import { controls, defaultProps } from './controls';
 
-type Story = StoryObj<{}>;
 
 const meta: Meta<Props> = {
   title: 'UI-KIT/Card',
   render: (props: Props) => {
     return createCard(props)
   },
-  args: {
-    textBody: 'textBody',
-    textHeader: 'textHeader',
-    textFooter: 'textFooter',
-    padding: PaddingsCard.Default
-  },
-  argTypes: {
-    padding: {
-      description: 'Размер padding\'a',
-      ...convertMapToControl(PaddingsCard)
-    }
-  },
+  args: defaultProps,
+  argTypes: controls,
   parameters: {
     docs: {
       description: {
