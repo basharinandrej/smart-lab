@@ -1,9 +1,9 @@
-import {ArgTypes} from '@storybook/html'
+import {Controls} from '../types'
 import {SizeButton, StateButton, TypeButton} from "./enums/enums";
 import {Props} from "./Button";
 
 
-export const controls: Controls = {
+export const controls: Controls<Props> = {
   label: {
     description: 'Текст в кнопке',
     table: {
@@ -79,7 +79,6 @@ export const defaultProps: DefaultProps = {
   icon: false,
   isFull: false
 }
-type Controls = Partial<ArgTypes<Props>>
 
 type DefaultProps = Partial<Omit<Props, 'icon'> & {
   icon: boolean
