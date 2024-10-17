@@ -14,21 +14,21 @@ export const createCard = ({
   const header = (`
     ${textHeader 
       ? `<div class="ds--card-header">
-          ${textHeader}
+          <p>${textHeader}</p>
         </div>`
       : ''}
   `)
   const body = (`
     ${textBody 
       ? `<div class="ds--card-body">
-          ${textBody}
+          <p>${textBody}</p>
         </div>`
       : ''}
   `)
   const footer = (`
     ${textFooter 
       ? `<div class="ds--card-footer">
-          ${textFooter}
+          <p>${textFooter}</p>
         </div>`
       : ''}
   `)
