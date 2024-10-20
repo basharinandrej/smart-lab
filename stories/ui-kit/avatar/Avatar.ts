@@ -6,10 +6,11 @@ import './avatar.css'
 
 export const createAvatar = ({
   size,
-  img,
+  src,
   isBorder = false,
   stubText,
-  isShowImg
+  isShowImg,
+  isHeaderPremium
 }: Props) => {
 
 
@@ -23,13 +24,22 @@ export const createAvatar = ({
   return `
     <div class="${classNames.join(' ')}">
       ${
-        isShowImg 
-        ? `<img class="ds--avatar-img" src="${img}" alt="avatar">`
+        (isShowImg && src.length) 
+        ? `<img class="ds--avatar-img" src="${src}" alt="avatar">`
         : `<div class="ds--avatar-stub">
             <p class="ds--avatar-stub-paragraph">
               ${stubText.toUpperCase().slice(0,2)}
             </p>
           </div>`
+        }
+        ${
+          isHeaderPremium 
+            ? `<div class="ds--avatar-icon-premium">
+                <svg viewBox="0 0 15 14">
+                  <use href="#diamond"></use>
+                </svg>
+              </div>` 
+            : ''
         }
     </div>
   `
@@ -38,7 +48,8 @@ export const createAvatar = ({
 export interface Props {
   size: AvatarSize
   isBorder: boolean
-  img?: string
+  isHeaderPremium: boolean
+  src?: string
   isShowImg?: boolean
   stubText?: string
 }
