@@ -33,6 +33,7 @@
     .ds--logo-label {
       width: 8px;
       height: 8px;
+      margin-top: 1px;
     }
     .ds--logo-paragraph {
       font-size: 25px;
@@ -43,9 +44,13 @@
     }
   }
   &--small {
+    .ds--logo-box {
+      margin-right: 1px;
+    }
     .ds--logo-label {
       width: 5px;
       height: 5px;
+      margin-top: 1px;
     }
     .ds--logo-paragraph {
       font-size: 19px;
