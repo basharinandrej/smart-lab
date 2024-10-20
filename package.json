@@ -1,6 +1,6 @@
 {
   "name": "smart-lab",
-  "version": "1.5",
+  "version": "1.6",
   "description": "design system for smart-lab",
   "main": "index.ts",
   "scripts": {
