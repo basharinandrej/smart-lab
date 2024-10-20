@@ -1,17 +1,17 @@
 
-export const enum SizeButton {
+export enum SizeButton {
   Small = 'Small',
   Default = 'Default',
   Big = 'Big'
 }
 
-export const enum TypeButton {
+export enum TypeButton {
   Primary = 'Primary',
   Secondary = 'Secondary',
   Green = 'Green'
 }
 
-export const enum StateButton {
+export enum StateButton {
   Default = 'Default',
   Hover = 'Hover',
   Disabled = 'Disabled',

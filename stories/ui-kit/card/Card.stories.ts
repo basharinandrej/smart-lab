@@ -1,20 +1,20 @@
-import {createSLLogo, Props} from './Sl-logo';
+import {createCard, Props} from './Card';
 import type {Meta} from '@storybook/html';
-import {defaultProps, controls} from './controls'
 import { Story } from '../types';
+import { controls, defaultProps } from './controls';
 
 
 const meta: Meta<Props> = {
-  title: 'UI-KIT/SL-Logo',
+  title: 'UI-KIT/Card',
   render: (props: Props) => {
-    return createSLLogo(props)
+    return createCard(props)
   },
   args: defaultProps,
   argTypes: controls,
   parameters: {
     docs: {
       description: {
-        component: 'Отображение элемента “Предупреждение” чтобы привлечь внимание пользователя.'
+        component: 'Отображение карточки с содержимым: header, body и footer.'
       },
     },
   },

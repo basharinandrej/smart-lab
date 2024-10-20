@@ -1,0 +1,35 @@
+.ds--chip {
+  background-color: var(--color-background-chip);
+  border-radius: 12px;
+  width: 8px;
+  height: 8px;
+
+  &.ds--chip--with-element {
+    position: absolute;
+    top:0;
+    right:0;
+    transform: translate(50%, -50%);
+  }
+  &.ds--chip--content {
+    width: max-content;
+    height: auto;
+    padding: 2px 6px;
+  }
+
+  &-paragraph {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12.1px;
+    color: var(--color-text-paragraph);
+  }
+}
+
+
+body[data-theme='dark']  {
+  --color-text-paragraph: var(--color-slate-800);
+  --color-background-chip: var(--color-red-400);
+}
+body[data-theme='light']  {
+  --color-text-paragraph: var(--color-white-alpha-100);
+  --color-background-chip: var(--color-red-400);
+}
