@@ -11,7 +11,8 @@ export const createButton = ({
   type = TypeButton.Primary,
   state = StateButton.Default,
   icon,
-  isFull
+  isFull,
+  children
 }: Props) => {
 
   const classNames = [
@@ -32,6 +33,7 @@ export const createButton = ({
       type="button"
       class="${classNames}"
     >
+      ${children ?  children : ''} 
       <div class="ds--button-loader"></div>
       ${icon 
         ? `<div class="ds--button-icon">
@@ -48,10 +50,11 @@ export const createButton = ({
 
 export interface Props {
   label: string
-  size: SizeButton
-  type: TypeButton
-  state: StateButton
+  size?: SizeButton
+  type?: TypeButton
+  state?: StateButton
   icon?: string
   isFull?: boolean 
+  children?: string
 }
 
