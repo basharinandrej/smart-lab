@@ -31,7 +31,7 @@ const meta: Meta<DefaultProps> = {
 
 export default meta;
 
-export const ChipWithButton: Story = {
+export const Primary: Story = {
 
 };
 
